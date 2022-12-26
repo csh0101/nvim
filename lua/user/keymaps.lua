@@ -32,12 +32,22 @@ keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
+-- bufferline
 keymap.set("n", "<S-l>", ":bnext<CR>", opts)
 keymap.set("n", "<S-h>", ":bprevious<CR>", opts)
+--keymap.set("n", "<S-k>", ":Bdelete<CR>", opts)
 
 -- Move text up and down
 keymap.set("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap.set("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+
+-- NvimTree
+keymap.set("n", "<A-m>", ":NvimTreeToggle<CR>", opts)
+
+-- QuitNeovim
+-- keymap.set('n', 'q', ':q<CR>', opts)
+-- keymap.set('n', 'qq', ':q!<CR>', opts)
+keymap.set('n', 'Q', ':qa!<CR>', opts)
 
 -- Insert --
 -- Press jk fast to enter
@@ -59,4 +69,3 @@ keymap.set("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap.set("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap.set("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap.set("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
-
